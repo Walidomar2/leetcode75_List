@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1678567041 source:d:\courses\walid\leetcode 75\is_isomophic\main.c
+	<stdio.h>
+	<stdlib.h>
+	<stdbool.h>
+	<string.h>
+
