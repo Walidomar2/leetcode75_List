@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1679430499 source:d:\courses\walid\leetcode 75\longest palindrome\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
