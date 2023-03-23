@@ -9,7 +9,7 @@ int main()
     int arrSize = (sizeof(numArr)/sizeof(int));
     int i=0,resultsize=0;
 
-    int *resultptr = runningSum(&numArr,arrSize,&resultsize);
+    int* resultptr = runningSum(numArr,arrSize,&resultsize);
 
     for(i=0;i<arrSize;i++)
     {
