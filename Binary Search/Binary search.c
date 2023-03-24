@@ -14,36 +14,24 @@ int main()
     scanf("%i",&value);
     result=search(nums,2,value);
     printf("%i\n",result);
-
-
 }
 
 int search(int* nums, int numsSize, int target){
-    int middleIndex = (int)(numsSize/2);
-    
-    if(target == nums[middleIndex])
-    {
-        return middleIndex;
-    }
-    else if(target > nums[middleIndex])
-    {
-        for(int i=middleIndex +1; i<numsSize; i++)
-        {
-            if(target==nums[i])
-                return i;
-        }
+    int middleIndex =0;
+    int leftIndex=0;
+    int rightIndex = numsSize - 1;
 
-        return -1;
-    }
-    else 
+    while (leftIndex <= rightIndex)
     {
-        for(int i=0; i < middleIndex; i++)
-        {
-            if(target==nums[i])
-                return i;
-        }
-        return -1;
+        middleIndex= (rightIndex+leftIndex)/2;
+
+        if(target==nums[middleIndex])
+            return middleIndex;
+        else if(target<nums[middleIndex])
+            rightIndex=middleIndex-1;
+        else 
+            leftIndex=middleIndex+1;
     }
 
-
+    return -1;
 }
